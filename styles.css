@@ -47,18 +47,18 @@ body {
   justify-content: center;
   align-items: center;
   background-color: hsl(
-    var(--hue, 200),
-    var(--saturation, 1%),
-    calc(var(--lightness-offset, 0%) + var(--lightness, 51%))
+    var(--hue, 214),
+    var(--saturation, 9%),
+    calc(var(--lightness-offset, 0%) + var(--lightness, 84%))
   );
-  color: white;
+  color: black;
   fill: white;
   text-transform: uppercase;
   border-radius: .25em;
   cursor: pointer;
   user-select: none;
 }
-
+ 
 .key.large {
   grid-column: span 3;
 }
@@ -73,19 +73,18 @@ body {
 }
 
 .key.wrong {
-  --lightness: 23%;
+  background-color: #787c7e;
+  color: white;
 }
 
 .key.wrong-location {
-  --hue: 49;
-  --saturation: 51%;
-  --lightness: 47%;
+  background-color:  #F0C808;
+  color: white;
 }
 
 .key.correct {
-  --hue: 115;
-  --saturation: 29%;
-  --lightness: 43%;
+  background-color: #006F54;
+  color: white;
 }
 
 .guess-grid {
@@ -118,17 +117,20 @@ body {
 
 .tile[data-state="wrong"] {
   border: none;
-  background-color: hsl(240, 2%, 50%);
+  background-color: #787c7e;
+  color: white;
 }
 
 .tile[data-state="wrong-location"] {
   border: none;
-  background-color: hsl(356, 95%, 75%);
+  background-color: #F0C808;
+  color: white;
 }
 
 .tile[data-state="correct"] {
   border: none;
-  background-color: #B1040E;
+  background-color: #006F54;
+  color: white;
 }
 
 .tile.shake {
