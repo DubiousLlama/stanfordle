@@ -1,15 +1,31 @@
 *, *::after, *::before {
   box-sizing: border-box;
-  font-family: Arial;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+  background-color: #B1040E;
+  color: white;
+  width: 100%;
+  float: left;
+}
+#title {
+  font-size: 2.25em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+hr {
+  width: 31.25em;
 }
 
 body {
-  background-color: hsl(240, 3%, 7%);
+  background-color: hsl(0, 100%, 100%);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  padding: 1em;
   font-size: clamp(.5rem, 2.5vmin, 1.5rem);
 }
 
@@ -19,6 +35,7 @@ body {
   grid-auto-rows: 3em;
   gap: .25em;
   justify-content: center;
+  margin-bottom: 1em;
 }
 
 .key {
@@ -76,16 +93,16 @@ body {
   justify-content: center;
   align-content: center;
   flex-grow: 1;
-  grid-template-columns: repeat(5, 4em);
-  grid-template-rows: repeat(6, 4em);
+  grid-template-columns: repeat(9, 3em);
+  grid-template-rows: repeat(6, 3em);
   gap: .25em;
   margin-bottom: 1em;
 }
 
 .tile {
   font-size: 2em;
-  color: white;
-  border: .05em solid hsl(240, 2%, 23%);
+  color: black;
+  border: .05em solid hsl(240, 2%, 50%);
   text-transform: uppercase;
   font-weight: bold;
   display: flex;
@@ -101,17 +118,17 @@ body {
 
 .tile[data-state="wrong"] {
   border: none;
-  background-color: hsl(240, 2%, 23%);
+  background-color: hsl(240, 2%, 50%);
 }
 
 .tile[data-state="wrong-location"] {
   border: none;
-  background-color: hsl(49, 51%, 47%);
+  background-color: hsl(356, 95%, 75%);
 }
 
 .tile[data-state="correct"] {
   border: none;
-  background-color: hsl(115, 29%, 43%);
+  background-color: #B1040E;
 }
 
 .tile.shake {
